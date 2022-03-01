@@ -1,5 +1,5 @@
 package vn.edu.giadinh.buoi2;
-
+/* */
 public class Shape {
     String shape;
 
@@ -14,5 +14,5 @@ public class Shape {
 
     public void play(){
         System.out.println("Choi tap tin am thanh.AIF.... ");
-    } 
+    }
 }
