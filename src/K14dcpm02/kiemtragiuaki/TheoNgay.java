@@ -44,6 +44,6 @@ public class TheoNgay extends Donthanhtoan {
     @Override
     public void outBill() {
         super.outBill();
-        System.out.printf("%-10.2f %-20.2f\n", gettheoNgay(), gettongTien());
+        System.out.printf("%-20.2f %-20.2f\n", gettheoNgay(), gettongTien());
     }
 }

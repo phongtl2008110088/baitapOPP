@@ -48,6 +48,6 @@ public class TheoGio extends Donthanhtoan {
     @Override
     public void outBill() {
         super.outBill();
-        System.out.printf("%-10.2f %-20.2f\n", getGio(), gettonggio());
+        System.out.printf("%-20.2f %-20.2f\n", getGio(), gettonggio());
     }
 }

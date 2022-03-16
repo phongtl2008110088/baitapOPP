@@ -86,7 +86,7 @@ public class Menu {
                         Menu1 = scanner.nextInt();
                         switch (Menu1) {
                             case 1: {
-                                System.out.printf("%-20s %-20s %-20s %-20s %-20s %-10s %-20s\n", "Ma hoa don",
+                                System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s", "Ma hoa don",
                                         "Ngay hoa don", "Ten khach hang", "Ma phong", "Don gia", "So ngay",
                                         "Thanh tien");
                                 for (int i = 0; i < count; i++)
@@ -96,7 +96,7 @@ public class Menu {
                                 ;
                                 break;
                             case 2: {
-                                System.out.printf("%-20s %-20s %-20s %-20s %-20s %-10s %-20s", "Ma hoa don",
+                                System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s", "Ma hoa don",
                                         "Ngay hoa don", "Ten khach hang", "Ma phong", "Don gia", "So gio",
                                         "Thanh tien");
                                 for (int i = 0; i < count; i++)
