@@ -7,17 +7,8 @@ import java.util.Scanner;
 public class Menu {
     static SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
-     public static int danhSachHoaDon(Donthanhtoan[] bill) throws ParseException {
-        int count = 0;
-        bill[0] = new TheoGio("123", formatter.parse("10/2/2013"), "3123", 10000, " nguyen van a" , 2);
-        bill[1] = new TheoNgay("456", formatter.parse("11/1/2013"), "4124", 1111111, "nguyen van b ", 3);
-
-        return count;
-    }
-
     public static void main(String[] args) throws ParseException {
         Donthanhtoan bill[] = new Donthanhtoan[10];
-        int count = danhSachHoaDon(bill);
         Scanner scanner = new Scanner(System.in);
         int luaChon;
         do {
@@ -45,11 +36,7 @@ public class Menu {
                                 int n = scanner.nextInt();
                                 for (int i = 0; i < n; i++) {
                                     System.out.println("Hoa don thu " + (i + 1) + ":");
-                                    TheoNgay dailyBill = new TheoNgay();
-                                    dailyBill.inBill();
-                                    bill[i + count] = new TheoNgay();
-                                    bill[i + count] = dailyBill;
-                                    count++;
+                                    TheoNgay dailyBill = new TheoNgay();                                 
                                 }
                             }
                                 ;
@@ -60,10 +47,7 @@ public class Menu {
                                     for (int i = 0; i < n; i++) {
                                         System.out.println("Hoa don thu " + (i + 1) + ":");
                                         TheoGio donTheoGio = new TheoGio();
-                                        donTheoGio.inBill();
-                                        bill[i + count] = new TheoGio();
-                                        bill[i + count] = donTheoGio;
-                                        count++;
+                                        donTheoGio.inBill();               
                                     }
                                 }
                                     ;
@@ -88,20 +72,13 @@ public class Menu {
                             case 1: {
                                 System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s", "Ma hoa don",
                                         "Ngay hoa don", "Ten khach hang", "Ma phong", "Don gia", "So ngay",
-                                        "Thanh tien");
-                                for (int i = 0; i < count; i++)
-                                    if (bill[i] instanceof TheoGio)
-                                        bill[i].outBill();
+                                        "Thanh tien");    
+                                     break;                                                                                     
                             }
-                                ;
-                                break;
                             case 2: {
                                 System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s", "Ma hoa don",
                                         "Ngay hoa don", "Ten khach hang", "Ma phong", "Don gia", "So gio",
-                                        "Thanh tien");
-                                for (int i = 0; i < count; i++)
-                                    if (bill[i] instanceof TheoGio)
-                                        bill[i].outBill();
+                                        "Thanh tien");                               
                             }
                                 ;
                                 break;
@@ -117,7 +94,7 @@ public class Menu {
                 case 3: {
                     double trungBinh = 0;
                     int count1 = 0;
-                    for (int i = 0; i < count; i++) {
+                    for (int i = 0; i < count1; i++) {
                         if (formatter.format(bill[i].ngayThanhToan).contains("09/2013")) {
                             trungBinh += bill[i].Tong;
                             count1++;
@@ -142,7 +119,7 @@ public class Menu {
                             switch (Menu1) {
                                 case 1: {
                                     int countNgay = 0;
-                                    for (int i = 0; i < count; i++)
+                                    for (int i = 0; i < countNgay; i++)
                                         if (bill[i] instanceof TheoNgay)
                                             countNgay++;
                                     System.out.println("Tong so luong hoa don theo ngay: " + countNgay);
@@ -151,7 +128,7 @@ public class Menu {
                                     break;
                                 case 2: {
                                     int countGio = 0;
-                                    for (int i = 0; i < count; i++)
+                                    for (int i = 0; i < countGio; i++)
                                         if (bill[i] instanceof TheoNgay)
                                             countGio++;
                                     System.out.println("Tong so luong hoa don theo gio: " + countGio);
